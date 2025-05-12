@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, create_engine
+from sqlalchemy import JSON, Column, Integer, create_engine, String, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 
 from sqlalchemy.orm import sessionmaker
@@ -22,3 +22,13 @@ def get_db():
         yield db
     finally:
         db.close()
+        
+class Submission(Base):
+    __tablename__ = "submissions"
+
+    id = Column(Integer, primary_key=True, index=True)
+    url = Column(String, nullable=False)
+    check_type = Column(String, nullable=False)
+    success = Column(Boolean, default=False)
+    data = Column(JSON)
+    message = Column(String)
