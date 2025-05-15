@@ -5,7 +5,7 @@ from webConfig import config
 from DB.db import engine, Base
 
 import Controllers.submissionContoller as submission
-
+import Controllers.testController as tests
 app = FastAPI(title=config.APP_NAME)
 Base.metadata.create_all(engine)
 
@@ -22,3 +22,4 @@ def create_db():
     print("Database and tables created successfully!")
     
 app.include_router(submission.router, prefix="/submission", tags=["submission"])
+app.include_router(tests.router, prefix="/tests", tags=["tests"])
