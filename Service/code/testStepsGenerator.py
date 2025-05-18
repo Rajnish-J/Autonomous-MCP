@@ -1,7 +1,9 @@
 import json
 import re
-from typing import Dict, List
+from typing import Dict, List, Any
 from langchain_google_genai import GoogleGenerativeAI
+from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
 
 
 class PlaywrightCodeGenerator:

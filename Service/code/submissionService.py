@@ -1,4 +1,4 @@
-from Models.schemas import SubmissionRequest, SubmissionResponse
+from Models.submissionModel import SubmissionRequest, SubmissionResponse
 from MCP import runBrowserCheck;
 
 async def process_submission(request: SubmissionRequest) -> SubmissionResponse:

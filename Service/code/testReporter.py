@@ -1,7 +1,7 @@
 from datetime import datetime
 from pathlib import Path
 import jinja2
-from Models.tests import TestCase
+from Models.testsModel import TestCase
 
 
 class TestReporter:

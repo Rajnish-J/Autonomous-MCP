@@ -1,9 +1,9 @@
 from datetime import datetime
-from Models.tests import TestCase, TestStep
-from Service.browserAgent import BrowserAgent
-from Service.testReporter import TestReporter
-from Service.testStepsGenerator import PlaywrightCodeGenerator
-from Service.userStoryExtractor import UserStoryExtractor
+from Models.testsModel import TestCase, TestStep
+from Service.code.browserAgent import BrowserAgent
+from Service.code.testReporter import TestReporter
+from Service.code.testStepsGenerator import PlaywrightCodeGenerator
+from Service.code.userStoryExtractor import UserStoryExtractor
 
 
 class AITestAutomation:

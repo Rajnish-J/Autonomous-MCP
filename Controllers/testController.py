@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from Service.aiTestAutomation import AITestAutomation
+from Service.code.aiTestAutomation import AITestAutomation
 
 router = APIRouter()
 
