@@ -32,3 +32,9 @@ class Submission(Base):
     success = Column(Boolean, default=False)
     data = Column(JSON)
     message = Column(String)
+    
+class UserStoryRequest(Base):
+    __tablename__ = "user_story_requests"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_story = Column(String, nullable=False)

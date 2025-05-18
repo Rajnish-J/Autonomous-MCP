@@ -2,7 +2,7 @@ import base64
 from typing import Any, Dict
 from langchain_google_genai import GoogleGenerativeAI
 from datetime import datetime
-from Models.tests import TestStep
+from Models.testsModel import TestStep
 from pathlib import Path
 from playwright.async_api import async_playwright
 from langchain.schema import HumanMessage

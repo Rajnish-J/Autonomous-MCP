@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from Models.schemas import SubmissionResponse, SubmissionRequest
-from Service.submissionService import process_submission
+from Models.submissionModel import SubmissionResponse, SubmissionRequest
+from Service.code.submissionService import process_submission
 
 router = APIRouter()
 

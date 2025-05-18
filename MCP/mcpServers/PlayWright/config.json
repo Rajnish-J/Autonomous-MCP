@@ -1,0 +1,6 @@
+{
+  "PLAYWRIGHT_TOOL": {
+    "url": "http://localhost:8010/PLAYWRIGHT",
+    "transport": "sse"
+  }
+}

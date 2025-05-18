@@ -6,6 +6,8 @@ from DB.db import engine, Base
 
 import Controllers.submissionContoller as submission
 import Controllers.testController as tests
+import Controllers.playwright_controller as playwright
+
 app = FastAPI(title=config.APP_NAME)
 Base.metadata.create_all(engine)
 
@@ -23,3 +25,4 @@ def create_db():
     
 app.include_router(submission.router, prefix="/submission", tags=["submission"])
 app.include_router(tests.router, prefix="/tests", tags=["tests"])
+app.include_router(playwright.router, prefix="/playwright", tags=["playwright"])
