@@ -1,11 +1,11 @@
 from langgraph.graph import StateGraph, END
-from MCP.states import UserState
-from MCP.agents import storyToPlanAgent, planToCodeAgent
+import core.states as state
+import core.agents as agent
 
 # Define simple graph
-workflow = StateGraph(UserState)
-workflow.add_node("storyToPlanAgent", storyToPlanAgent)
-workflow.add_node("planToCodeAgent", planToCodeAgent)
+workflow = StateGraph(state.UserState)
+workflow.add_node("storyToPlanAgent", agent.storyToPlanAgent)
+workflow.add_node("planToCodeAgent", agent.planToCodeAgent)
 
 workflow.set_entry_point("storyToPlanAgent")
 workflow.add_edge("storyToPlanAgent", "planToCodeAgent")
@@ -13,10 +13,13 @@ workflow.add_edge("planToCodeAgent", END)
 
 app = workflow.compile()
 
+
+
 def generate_playwright_code(user_story: str):
     """
     Server-side function to generate Playwright code from a user story.
     """
+    
     initial_state = {
         "user_story": user_story,
         "plan": "",
@@ -31,3 +34,4 @@ def generate_playwright_code(user_story: str):
         "plan": result.get("plan"),
         "code": result.get("code")
     }
+    

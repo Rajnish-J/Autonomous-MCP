@@ -1,5 +1,5 @@
 from Models.submissionModel import SubmissionRequest, SubmissionResponse
-from MCP import runBrowserCheck;
+from core import runBrowserCheck;
 
 async def process_submission(request: SubmissionRequest) -> SubmissionResponse:
     """

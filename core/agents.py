@@ -1,6 +1,6 @@
 from langchain_core.output_parsers import StrOutputParser
 
-from MCP import models, prompts
+from core import models, prompts
 
 async def storyToPlanAgent(state):
     print("Story to Plan Agent Running...")

@@ -1,6 +1,6 @@
 import re
 from fastapi import HTTPException
-from MCP.mcpServers.PlayWright.server import generate_playwright_code
+from core.mcpServers.PlayWright.server import generate_playwright_code
 
 def validate_user_story(user_story: str):
     if not user_story or len(user_story.strip()) < 10:
