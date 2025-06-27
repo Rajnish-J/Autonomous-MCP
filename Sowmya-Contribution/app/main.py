@@ -1,5 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
-from app.controller import test_executor
+from app.controller import testExecutorController
 
 app = FastAPI()
-app.include_router(test_executor.router)
+app.include_router(testExecutorController.router)
